@@ -21,6 +21,13 @@
 		9C399E8919B50929005CB16D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C399E6B19B50929005CB16D /* UIKit.framework */; };
 		9C399E9119B50929005CB16D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C399E8F19B50929005CB16D /* InfoPlist.strings */; };
 		9C399E9319B50929005CB16D /* FashionClockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399E9219B50929005CB16D /* FashionClockTests.m */; };
+		9C399EA719B50E9A005CB16D /* BEMAnalogClockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399E9E19B50E9A005CB16D /* BEMAnalogClockView.m */; };
+		9C399EA819B50E9A005CB16D /* BEMHandsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399EA019B50E9A005CB16D /* BEMHandsAnimation.m */; };
+		9C399EA919B50E9A005CB16D /* BEMHourHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399EA219B50E9A005CB16D /* BEMHourHand.m */; };
+		9C399EAA19B50E9A005CB16D /* BEMMinuteHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399EA419B50E9A005CB16D /* BEMMinuteHand.m */; };
+		9C399EAB19B50E9A005CB16D /* BEMSecondHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C399EA619B50E9A005CB16D /* BEMSecondHand.m */; };
+		9CC546E719B61167003D6944 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC546E619B61167003D6944 /* Settings.m */; };
+		9CC546F119B62EAD003D6944 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC546F019B62EAD003D6944 /* ConfigViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,20 @@
 		9C399E8E19B50929005CB16D /* FashionClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FashionClockTests-Info.plist"; sourceTree = "<group>"; };
 		9C399E9019B50929005CB16D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C399E9219B50929005CB16D /* FashionClockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FashionClockTests.m; sourceTree = "<group>"; };
+		9C399E9D19B50E9A005CB16D /* BEMAnalogClockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnalogClockView.h; sourceTree = "<group>"; };
+		9C399E9E19B50E9A005CB16D /* BEMAnalogClockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnalogClockView.m; sourceTree = "<group>"; };
+		9C399E9F19B50E9A005CB16D /* BEMHandsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMHandsAnimation.h; sourceTree = "<group>"; };
+		9C399EA019B50E9A005CB16D /* BEMHandsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMHandsAnimation.m; sourceTree = "<group>"; };
+		9C399EA119B50E9A005CB16D /* BEMHourHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMHourHand.h; sourceTree = "<group>"; };
+		9C399EA219B50E9A005CB16D /* BEMHourHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMHourHand.m; sourceTree = "<group>"; };
+		9C399EA319B50E9A005CB16D /* BEMMinuteHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMMinuteHand.h; sourceTree = "<group>"; };
+		9C399EA419B50E9A005CB16D /* BEMMinuteHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMMinuteHand.m; sourceTree = "<group>"; };
+		9C399EA519B50E9A005CB16D /* BEMSecondHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSecondHand.h; sourceTree = "<group>"; };
+		9C399EA619B50E9A005CB16D /* BEMSecondHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSecondHand.m; sourceTree = "<group>"; };
+		9CC546E519B61167003D6944 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		9CC546E619B61167003D6944 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		9CC546EF19B62EAD003D6944 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		9CC546F019B62EAD003D6944 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +133,11 @@
 		9C399E6D19B50929005CB16D /* FashionClock */ = {
 			isa = PBXGroup;
 			children = (
-				9C399E7619B50929005CB16D /* AppDelegate.h */,
-				9C399E7719B50929005CB16D /* AppDelegate.m */,
-				9C399E7919B50929005CB16D /* Main.storyboard */,
-				9C399E7C19B50929005CB16D /* ViewController.h */,
-				9C399E7D19B50929005CB16D /* ViewController.m */,
+				9CC546EB19B61A13003D6944 /* View */,
+				9CC546E419B61141003D6944 /* Model */,
+				9C399EAC19B5186C005CB16D /* Controllers */,
+				9C399EAD19B5188A005CB16D /* Root */,
+				9C399E9C19B50E9A005CB16D /* BEMAnalogClock */,
 				9C399E7F19B50929005CB16D /* Images.xcassets */,
 				9C399E6E19B50929005CB16D /* Supporting Files */,
 			);
@@ -150,6 +171,60 @@
 				9C399E8F19B50929005CB16D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C399E9C19B50E9A005CB16D /* BEMAnalogClock */ = {
+			isa = PBXGroup;
+			children = (
+				9C399E9D19B50E9A005CB16D /* BEMAnalogClockView.h */,
+				9C399E9E19B50E9A005CB16D /* BEMAnalogClockView.m */,
+				9C399E9F19B50E9A005CB16D /* BEMHandsAnimation.h */,
+				9C399EA019B50E9A005CB16D /* BEMHandsAnimation.m */,
+				9C399EA119B50E9A005CB16D /* BEMHourHand.h */,
+				9C399EA219B50E9A005CB16D /* BEMHourHand.m */,
+				9C399EA319B50E9A005CB16D /* BEMMinuteHand.h */,
+				9C399EA419B50E9A005CB16D /* BEMMinuteHand.m */,
+				9C399EA519B50E9A005CB16D /* BEMSecondHand.h */,
+				9C399EA619B50E9A005CB16D /* BEMSecondHand.m */,
+			);
+			path = BEMAnalogClock;
+			sourceTree = "<group>";
+		};
+		9C399EAC19B5186C005CB16D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C399E7C19B50929005CB16D /* ViewController.h */,
+				9C399E7D19B50929005CB16D /* ViewController.m */,
+				9CC546EF19B62EAD003D6944 /* ConfigViewController.h */,
+				9CC546F019B62EAD003D6944 /* ConfigViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C399EAD19B5188A005CB16D /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9C399E7619B50929005CB16D /* AppDelegate.h */,
+				9C399E7719B50929005CB16D /* AppDelegate.m */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		9CC546E419B61141003D6944 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CC546E519B61167003D6944 /* Settings.h */,
+				9CC546E619B61167003D6944 /* Settings.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9CC546EB19B61A13003D6944 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C399E7919B50929005CB16D /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +324,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C399EA819B50E9A005CB16D /* BEMHandsAnimation.m in Sources */,
+				9CC546E719B61167003D6944 /* Settings.m in Sources */,
+				9CC546F119B62EAD003D6944 /* ConfigViewController.m in Sources */,
+				9C399EA719B50E9A005CB16D /* BEMAnalogClockView.m in Sources */,
 				9C399E7E19B50929005CB16D /* ViewController.m in Sources */,
+				9C399EA919B50E9A005CB16D /* BEMHourHand.m in Sources */,
 				9C399E7819B50929005CB16D /* AppDelegate.m in Sources */,
+				9C399EAB19B50E9A005CB16D /* BEMSecondHand.m in Sources */,
 				9C399E7419B50929005CB16D /* main.m in Sources */,
+				9C399EAA19B50E9A005CB16D /* BEMMinuteHand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +538,7 @@
 				9C399E9819B50929005CB16D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9C399E9919B50929005CB16D /* Build configuration list for PBXNativeTarget "FashionClockTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +547,7 @@
 				9C399E9B19B50929005CB16D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

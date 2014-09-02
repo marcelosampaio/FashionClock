@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BEMAnalogClockView.h"
+#import "Settings.h"
 
 @interface ViewController : UIViewController
+
+
+
+// properties
+@property (nonatomic,strong) Settings *settings;
+
 
 @end

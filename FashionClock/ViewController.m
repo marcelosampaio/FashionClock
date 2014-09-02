@@ -14,16 +14,38 @@
 
 @implementation ViewController
 
+@synthesize settings;
+
+
+#pragma mark - View Life Cycle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    // Settings Object
+    self.settings=[[Settings alloc]init];
+    // Default Values
+    [self defaultValues];
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    // Navigation bar
+    [self.navigationController.navigationBar setHidden:YES];
+    // Default values
+}
+
+#pragma mark - Working Methods
+-(void)defaultValues {
+    // app background color
+    self.view.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
+    
+}
+
+#pragma mark - Status Bar
+-(BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end
