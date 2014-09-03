@@ -13,6 +13,9 @@
 // Scroll
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+// Settings
+@property (strong,nonatomic) Settings *settings;
+
 
 // Panes
 @property (weak, nonatomic) IBOutlet UIView *leftPane;

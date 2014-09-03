@@ -31,13 +31,14 @@
 {
     [super viewDidLoad];
 
+    // Settings
+    self.settings=[[Settings alloc]init];
+    
     // SetUp Scroll
     self.scrollView.scrollEnabled=YES;
     self.scrollView.contentSize=CGSizeMake(260,1595);
     self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    
-    NSLog(@"passed here");
-    
+
     self.view.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
     self.leftPane.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
     // Panes
@@ -57,11 +58,46 @@
     self.generalGraduation.thumbTintColor=DEFAULT_APP_BACKGROUND_COLOR;
     self.generalGraduation.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
     
+    // Populate Controls with sotred data
+    [self populateControls];
+    
 }
 
 #pragma mark - UI Actions
 - (IBAction)close:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)changedBorder:(id)sender {
+    if (self.generalBorders.isOn) {
+        [self.settings addBorderWithValue:@"YES"];
+    } else {
+        [self.settings addBorderWithValue:@"NO"];
+    }
+}
+
+- (IBAction)changedDigit:(id)sender {
+    if (self.generalDigits.isOn) {
+        [self.settings addDigitWithValue:@"YES"];
+    } else {
+        [self.settings addDigitWithValue:@"NO"];
+    }
+}
+
+- (IBAction)changedGraduation:(id)sender {
+    if (self.generalGraduation.isOn) {
+        [self.settings addGraduationWithValue:@"YES"];
+    } else {
+        [self.settings addGraduationWithValue:@"NO"];
+    }
+}
+
+#pragma mark - Working Methods
+-(void)populateControls {
+    // General Settings
+    self.generalBorders.on=[self.settings borderIsVisible];
+    self.generalDigits.on=[self.settings digitIsVisible];
+    self.generalGraduation.on=[self.settings graduationIsVisible];
 }
 
 #pragma mark - Status Bar

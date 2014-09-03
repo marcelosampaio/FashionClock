@@ -38,6 +38,15 @@
 
 #pragma mark - Working Methods
 -(void)defaultValues {
+    // Default values to be stored in NSUserDefaults
+    if (![self.settings defaultStorageFlag]) {
+        [self.settings addDefaultStorageFlag];
+        // Store General Settings - Clock Border, Digit & Graduation
+        [self.settings addBorderWithValue:@"YES"];
+        [self.settings addDigitWithValue:@"YES"];
+        [self.settings addGraduationWithValue:@"YES"];
+    }
+
     // app background color
     self.view.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
     
