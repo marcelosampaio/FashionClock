@@ -59,6 +59,7 @@
 
 @implementation BEMAnalogClockView
 
+
 #pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame {

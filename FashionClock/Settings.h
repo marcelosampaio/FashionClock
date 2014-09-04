@@ -16,6 +16,9 @@
 #define DEFAULT_SETTINGS_BACKGROUND_COLOR               [UIColor colorWithRed:0.55f green:0.00f blue:0.00f alpha:1]
 #define DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK          [UIColor colorWithRed:0.40f green:0.00f blue:0.00f alpha:1]
 
+// Measures
+#define DEFAULT_CLOCK_SIZE                              200
+#define DEFAULT_CLOCK_TAG                               999
 
 @interface Settings : NSObject
 
@@ -23,14 +26,20 @@
 -(BOOL)defaultStorageFlag;
 -(void)addDefaultStorageFlag;
 
-// General Settings - Border
+// ===================== General Settings ==============================
+// Border
 -(BOOL)borderIsVisible;
 -(void)addBorderWithValue:(NSString *)value;
-// General Settings - Digit
+// Digit
 -(BOOL)digitIsVisible;
 -(void)addDigitWithValue:(NSString *)value;
-// General Settings - Graduation
+// Graduation
 -(BOOL)graduationIsVisible;
 -(void)addGraduationWithValue:(NSString *)value;
+// =====================================================================
+
+
+
+
 
 @end

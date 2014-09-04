@@ -10,7 +10,7 @@
 #import "BEMAnalogClockView.h"
 #import "Settings.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<BEMAnalogClockDelegate>
 
 
 

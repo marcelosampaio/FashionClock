@@ -16,6 +16,9 @@
 @synthesize scrollView;
 @synthesize leftPane,pane00,pane01,pane02;
 @synthesize generalBorders,generalDigits,generalGraduation;
+@synthesize backgroundAlpha,backgroundBlue,backgroundGreen,backgroundPreview,backgroundRed;
+@synthesize clockFaceAlpha,clockFaceBlue,clockFaceGreen,clockFacePreview,clockFaceRed;
+
 
 #pragma mark - Initialization
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
