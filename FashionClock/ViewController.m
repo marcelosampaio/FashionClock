@@ -45,15 +45,23 @@
     self.settings=[[Settings alloc]init];
     
     // One time procedure - load all defaults values for the first time only!!!
-    if (![self.settings defaultStorageFlag]) {
+    
+//
+// ATTENTION AFTER ALL METHODS HAVE BEEN IMPLEMENTED REMOVE IF COMMENTS BELOW    <----------------------- **** HIGH IMPORTANCE ****
+//
+//    if (![self.settings defaultStorageFlag]) {
         // Flag system in order to say "defaults loaded OK"
-        [self. S"];
+        [self.settings addDefaultStorageFlag];
+        // Store General Settings - Clock Border, Digit & Graduation
+        [self.settings addBorderWithValue:@"YES"];
+        [self.settings addDigitWithValue:@"YES"];
         [self.settings addGraduationWithValue:@"YES"];
-    }
+        [self.settings addBackgroundColorWithRed:DEFAULT_APP_BACKGROUND_COLOR_RED green:DEFAULT_APP_BACKGROUND_COLOR_GREEN blue:DEFAULT_APP_BACKGROUND_COLOR_BLUE alpha:DEFAULT_APP_BACKGROUND_COLOR_ALPHA];
+        [self.settings addClockFaceColorWithRed:DEFAULT_CLOCK_FACE_COLOR_RED green:DEFAULT_CLOCK_FACE_COLOR_GREEN blue:DEFAULT_CLOCK_FACE_COLOR_BLUE alpha:DEFAULT_CLOCK_FACE_COLOR_ALPHA];
+//    }
 
     // app background color
-    self.view.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
-    
+    self.view.backgroundColor=[settings backgroundColor];
 }
 
 #pragma mark - Analog Clock
@@ -91,11 +99,11 @@
     }
 
     // app background color
-    self.view.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
+    self.view.backgroundColor=[self.settings backgroundColor];
     
     // Clock Face color
-    clock.faceBackgroundColor = DEFAULT_APP_BACKGROUND_COLOR;
-    clock.faceBackgroundAlpha = 1.0;
+    clock.faceBackgroundColor = [self.settings clockFaceColor];
+    clock.faceBackgroundAlpha = [self.settings clockFaceAlpha];
     
     clock.digitFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17];
 

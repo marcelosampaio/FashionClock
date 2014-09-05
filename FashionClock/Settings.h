@@ -9,8 +9,20 @@
 #import <Foundation/Foundation.h>
 
 // App Constants
-//      - Colors
+//      - Colors and their decomposition
 #define DEFAULT_APP_BACKGROUND_COLOR                    [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1]
+#define DEFAULT_APP_BACKGROUND_COLOR_RED                0.05f
+#define DEFAULT_APP_BACKGROUND_COLOR_GREEN              0.50f
+#define DEFAULT_APP_BACKGROUND_COLOR_BLUE               0.20f
+#define DEFAULT_APP_BACKGROUND_COLOR_ALPHA              1.00f
+
+#define DEFAULT_CLOCK_FACE_COLOR                        [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1]
+#define DEFAULT_CLOCK_FACE_COLOR_RED                    0.05f
+#define DEFAULT_CLOCK_FACE_COLOR_GREEN                  0.50f
+#define DEFAULT_CLOCK_FACE_COLOR_BLUE                   0.20f
+#define DEFAULT_CLOCK_FACE_COLOR_ALPHA                  1.00f
+
+
 #define DEFAULT_APP_BACKGROUND_COLOR_LIGHT              [UIColor colorWithRed:0.25f green:0.70f blue:0.40f alpha:1]
 #define DEFAULT_APP_DETAIL_COLOR                        [UIColor whiteColor]
 #define DEFAULT_SETTINGS_BACKGROUND_COLOR               [UIColor colorWithRed:0.55f green:0.00f blue:0.00f alpha:1]
@@ -36,10 +48,19 @@
 // Graduation
 -(BOOL)graduationIsVisible;
 -(void)addGraduationWithValue:(NSString *)value;
-// =====================================================================
 
 
+// ======================== Background Color =============================
+// Get color
+-(UIColor *)backgroundColor;
+// Set Color
+-(void)addBackgroundColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
-
+// ======================== Clock Face Color =============================
+// Get color
+-(UIColor *)clockFaceColor;
+-(float)clockFaceAlpha;
+// Set Color
+-(void)addClockFaceColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
 @end

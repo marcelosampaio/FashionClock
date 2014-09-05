@@ -33,37 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Settings
-    self.settings=[[Settings alloc]init];
     
-    // SetUp Scroll
-    self.scrollView.scrollEnabled=YES;
-    self.scrollView.contentSize=CGSizeMake(260,1595);
-    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-
-    self.view.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
-    self.leftPane.backgroundColor=DEFAULT_APP_BACKGROUND_COLOR;
-    // Panes
-    self.pane00.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
-    self.pane01.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
-    self.pane02.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
-    // General Settings Swtiches
-    self.generalBorders.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
-    self.generalBorders.thumbTintColor=DEFAULT_APP_BACKGROUND_COLOR;
-    self.generalBorders.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
-    
-    self.generalDigits.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
-    self.generalDigits.thumbTintColor=DEFAULT_APP_BACKGROUND_COLOR;
-    self.generalDigits.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
-    
-    self.generalGraduation.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
-    self.generalGraduation.thumbTintColor=DEFAULT_APP_BACKGROUND_COLOR;
-    self.generalGraduation.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
-    
-    // Populate Controls with sotred data
-    [self populateControls];
-    
+    [self setUp];
 }
 
 #pragma mark - UI Actions
@@ -96,11 +67,103 @@
 }
 
 #pragma mark - Working Methods
+-(void)setUp {
+    // Settings
+    self.settings=[[Settings alloc]init];
+    
+    // SetUp Scroll
+    self.scrollView.scrollEnabled=YES;
+    self.scrollView.contentSize=CGSizeMake(260,1595);
+    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    
+    self.view.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
+    self.leftPane.backgroundColor=[self.settings backgroundColor];
+    // Panes
+    self.pane00.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    self.pane01.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    self.pane02.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    self.pane03.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    self.pane04.backgroundColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    // General Settings Swtiches
+    self.generalBorders.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
+    //    self.generalBorders.thumbTintColor=[self.settings backgroundColor];
+    self.generalBorders.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
+    
+    self.generalDigits.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
+    //    self.generalDigits.thumbTintColor=[self.settings backgroundColor];
+    self.generalDigits.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
+    
+    self.generalGraduation.tintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR;
+    //    self.generalGraduation.thumbTintColor=[self.settings backgroundColor];
+    self.generalGraduation.onTintColor=DEFAULT_APP_BACKGROUND_COLOR_LIGHT;
+    
+    // Background Color Sliders
+    self.backgroundRed.minimumTrackTintColor=[UIColor redColor];
+    self.backgroundRed.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.backgroundGreen.minimumTrackTintColor=[UIColor greenColor];
+    self.backgroundGreen.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.backgroundBlue.minimumTrackTintColor=[UIColor blueColor];
+    self.backgroundBlue.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.backgroundAlpha.minimumTrackTintColor=[UIColor lightGrayColor];
+    self.backgroundAlpha.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    // Clock Face Color Sliders
+    self.clockFaceRed.minimumTrackTintColor=[UIColor redColor];
+    self.clockFaceRed.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.clockFaceGreen.minimumTrackTintColor=[UIColor greenColor];
+    self.clockFaceGreen.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.clockFaceBlue.minimumTrackTintColor=[UIColor blueColor];
+    self.clockFaceBlue.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    self.clockFaceAlpha.minimumTrackTintColor=[UIColor lightGrayColor];
+    self.clockFaceAlpha.maximumTrackTintColor=DEFAULT_SETTINGS_BACKGROUND_COLOR_DARK;
+    
+    
+    
+    // Populate Controls with stored data
+    [self populateControls];
+
+}
+
+
 -(void)populateControls {
     // General Settings
     self.generalBorders.on=[self.settings borderIsVisible];
     self.generalDigits.on=[self.settings digitIsVisible];
     self.generalGraduation.on=[self.settings graduationIsVisible];
+    
+    // Background Colors
+    CGFloat red, green, blue, alpha;
+    UIColor *backgroundColor=[self.settings backgroundColor];
+
+    [backgroundColor getRed: &red green:&green blue:&blue alpha:&alpha];
+    
+    self.backgroundRed.value=red;
+    self.backgroundGreen.value=green;
+    self.backgroundBlue.value=blue;
+    self.backgroundAlpha.value=alpha;
+    self.backgroundPreview.backgroundColor=backgroundColor;
+    
+    // Clock Face Colors
+    UIColor *clockFaceColor=[self.settings clockFaceColor];
+    [clockFaceColor getRed:&red green:&green blue:&blue alpha:&alpha];
+    
+    self.clockFaceRed.value=red;
+    self.clockFaceGreen.value=green;
+    self.clockFaceBlue.value=blue;
+    self.clockFaceAlpha.value=alpha;
+    self.clockFacePreview.backgroundColor=clockFaceColor;
+    
+    
+    
+    
+
 }
 
 #pragma mark - Status Bar

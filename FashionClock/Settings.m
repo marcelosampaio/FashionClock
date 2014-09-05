@@ -87,5 +87,59 @@
     [defaults synchronize];
 }
 
+#pragma mark - Background Color
+-(UIColor *)backgroundColor {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *redString=[defaults objectForKey:@"backgroundColorRed"];
+    NSString *greenString=[defaults objectForKey:@"backgroundColorGreen"];
+    NSString *blueString=[defaults objectForKey:@"backgroundColorBlue"];
+    NSString *alphaString=[defaults objectForKey:@"backgroundColorAlpha"];
+    
+    return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
+    
+}
+
+-(void)addBackgroundColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%f",red] forKey:@"backgroundColorRed"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",green] forKey:@"backgroundColorGreen"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",blue] forKey:@"backgroundColorBlue"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",alpha] forKey:@"backgroundColorAlpha"];
+    
+    [defaults synchronize];
+    
+}
+
+#pragma mark - Clock Face Color
+-(UIColor *)clockFaceColor {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *redString=[defaults objectForKey:@"clockFaceColorRed"];
+    NSString *greenString=[defaults objectForKey:@"clockFaceColorGreen"];
+    NSString *blueString=[defaults objectForKey:@"clockFaceColorBlue"];
+    NSString *alphaString=[defaults objectForKey:@"clockFaceColorAlpha"];
+    
+    return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
+    
+}
+-(float)clockFaceAlpha {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    return [[defaults objectForKey:@"clockFaceColorAlpha"]floatValue];
+}
+
+-(void)addClockFaceColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%f",red] forKey:@"clockFaceColorRed"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",green] forKey:@"clockFaceColorGreen"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",blue] forKey:@"clockFaceColorBlue"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",alpha] forKey:@"clockFaceColorAlpha"];
+    
+    [defaults synchronize];
+    
+}
+
 
 @end

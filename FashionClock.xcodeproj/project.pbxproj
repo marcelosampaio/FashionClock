@@ -133,7 +133,7 @@
 		9C399E6D19B50929005CB16D /* FashionClock */ = {
 			isa = PBXGroup;
 			children = (
-				9CC546EB19B61A13003D6944 /* View */,
+				9CC546EB19B61A13003D6944 /* UI */,
 				9CC546E419B61141003D6944 /* Model */,
 				9C399EAC19B5186C005CB16D /* Controllers */,
 				9C399EAD19B5188A005CB16D /* Root */,
@@ -219,12 +219,12 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		9CC546EB19B61A13003D6944 /* View */ = {
+		9CC546EB19B61A13003D6944 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				9C399E7919B50929005CB16D /* Main.storyboard */,
 			);
-			name = View;
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
