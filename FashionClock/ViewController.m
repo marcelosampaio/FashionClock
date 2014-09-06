@@ -21,7 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    // Settings Object
+    self.settings=[[Settings alloc]init];
     // Store and Load Default Values
     [self defaultValues];
     
@@ -35,21 +36,13 @@
     
     // Load clock to UI
     [self analogClock];
-
+    
 }
 
 #pragma mark - Working Methods
 -(void)defaultValues {
-    
-    // Settings Object
-    self.settings=[[Settings alloc]init];
-    
     // One time procedure - load all defaults values for the first time only!!!
-    
-//
-// ATTENTION AFTER ALL METHODS HAVE BEEN IMPLEMENTED REMOVE IF COMMENTS BELOW    <----------------------- **** HIGH IMPORTANCE ****
-//
-//    if (![self.settings defaultStorageFlag]) {
+    if (![self.settings defaultStorageFlag]) {
         // Flag system in order to say "defaults loaded OK"
         [self.settings addDefaultStorageFlag];
         // Store General Settings - Clock Border, Digit & Graduation
@@ -58,7 +51,11 @@
         [self.settings addGraduationWithValue:@"YES"];
         [self.settings addBackgroundColorWithRed:DEFAULT_APP_BACKGROUND_COLOR_RED green:DEFAULT_APP_BACKGROUND_COLOR_GREEN blue:DEFAULT_APP_BACKGROUND_COLOR_BLUE alpha:DEFAULT_APP_BACKGROUND_COLOR_ALPHA];
         [self.settings addClockFaceColorWithRed:DEFAULT_CLOCK_FACE_COLOR_RED green:DEFAULT_CLOCK_FACE_COLOR_GREEN blue:DEFAULT_CLOCK_FACE_COLOR_BLUE alpha:DEFAULT_CLOCK_FACE_COLOR_ALPHA];
-//    }
+        [self.settings addClockBorderColorWithRed:DEFAULT_CLOCK_BORDER_COLOR_RED green:DEFAULT_CLOCK_BORDER_COLOR_GREEN blue:DEFAULT_CLOCK_BORDER_COLOR_BLUE alpha:DEFAULT_CLOCK_BORDER_COLOR_ALPHA];
+        // Default color of the digit & gradiante are the same of the border (they'll use border's degfault)
+        [self.settings addDigitColorWithRed:DEFAULT_CLOCK_BORDER_COLOR_RED green:DEFAULT_CLOCK_BORDER_COLOR_GREEN blue:DEFAULT_CLOCK_BORDER_COLOR_BLUE alpha:DEFAULT_CLOCK_BORDER_COLOR_ALPHA];
+        [self.settings addGraduationColorWithRed:DEFAULT_CLOCK_BORDER_COLOR_RED green:DEFAULT_CLOCK_BORDER_COLOR_GREEN blue:DEFAULT_CLOCK_BORDER_COLOR_BLUE alpha:DEFAULT_CLOCK_BORDER_COLOR_ALPHA];
+    }
 
     // app background color
     self.view.backgroundColor=[settings backgroundColor];
@@ -78,7 +75,7 @@
     clock.currentTime = YES;
     clock.setTimeViaTouch = NO;
 
-    clock.borderColor = DEFAULT_APP_DETAIL_COLOR;
+    clock.borderColor = [self.settings clockBorderColor];
     // Border Visibility - General Settings
     if ([settings borderIsVisible]) {
         clock.borderWidth = 3.00f;
@@ -108,7 +105,7 @@
     clock.digitFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:17];
 
     // Digit Color
-    clock.digitColor = DEFAULT_APP_DETAIL_COLOR;
+    clock.digitColor = [self.settings digitColor];
 
     // Hour
     clock.hourHandColor=DEFAULT_APP_DETAIL_COLOR;
@@ -153,11 +150,14 @@
 }
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
-    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
-        return DEFAULT_APP_DETAIL_COLOR;
-    } else {
-        return DEFAULT_APP_DETAIL_COLOR;
-    }
+    
+    return [self.settings graduationColor];
+    
+//    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
+//        return [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+//    } else {
+//        return [UIColor yellowColor];
+//    }
 }
 
 -(CGFloat)analogClock:(BEMAnalogClockView *)clock graduationAlphaForIndex:(NSInteger)index {
@@ -182,13 +182,13 @@
 
 
 
-#pragma mark - Navigation 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"prepareForSegue Method");
-    if ([segue.identifier isEqualToString:@"showConfiguration"]) {
-        NSLog(@"SEGUE identified");
-    }
-}
+//#pragma mark - Navigation 
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+////    NSLog(@"prepareForSegue Method");
+////    if ([segue.identifier isEqualToString:@"showConfiguration"]) {
+////        NSLog(@"SEGUE identified");
+////    }
+//}
 
 #pragma mark - Status Bar
 -(BOOL)prefersStatusBarHidden {

@@ -38,7 +38,7 @@
             <objects>
                 <viewController id="JWr-fB-pci" customClass="ConfigViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1bc-z1-EQz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="3000"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="fWb-oW-EHP">
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="W80-Pb-5Ce">
-                                <rect key="frame" x="50" y="0.0" width="320" height="1500"/>
+                                <rect key="frame" x="50" y="0.0" width="320" height="3000"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GENERAL SETTINGS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iIv-p7-pLt">
@@ -160,11 +160,17 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="changedBackgroundRed:" destination="JWr-fB-pci" eventType="valueChanged" id="tzt-Se-ruk"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="f7O-EG-qtZ">
                                                 <rect key="frame" x="79" y="57" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changedBackgroundGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="mof-TK-p0R"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4OR-Ws-C7t">
                                                 <rect key="frame" x="24" y="103" width="54" height="21"/>
@@ -177,6 +183,9 @@
                                                 <rect key="frame" x="79" y="99" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <action selector="changedBackgroundBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="fq1-Jt-7ye"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wLg-N3-UpI">
                                                 <rect key="frame" x="24" y="145" width="54" height="21"/>
@@ -189,6 +198,9 @@
                                                 <rect key="frame" x="79" y="141" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="minimumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="changedBackgroundAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="2LF-eh-kSA"/>
+                                                </connections>
                                             </slider>
                                             <view contentMode="scaleToFill" id="IG3-OL-ooh">
                                                 <rect key="frame" x="81" y="182" width="167" height="59"/>
@@ -226,10 +238,16 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Yeo-GP-FNd">
                                                 <rect key="frame" x="79" y="15" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockFaceRed:" destination="JWr-fB-pci" eventType="valueChanged" id="UxC-t7-uf2"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="87F-xt-mHq">
                                                 <rect key="frame" x="79" y="57" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockFaceGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="MFR-tD-z3a"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VnL-bE-rA3">
                                                 <rect key="frame" x="24" y="103" width="54" height="21"/>
@@ -241,6 +259,9 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="34L-y8-8Id">
                                                 <rect key="frame" x="79" y="99" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockFaceBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="S1y-IT-QoL"/>
+                                                </connections>
                                             </slider>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUi-3Q-2se">
                                                 <rect key="frame" x="24" y="145" width="54" height="21"/>
@@ -252,8 +273,260 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="s9F-Cf-NYB">
                                                 <rect key="frame" x="79" y="141" width="171" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockFaceAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="7wp-eb-9tU"/>
+                                                </connections>
                                             </slider>
                                             <view contentMode="scaleToFill" id="7O4-X6-lA6">
+                                                <rect key="frame" x="81" y="182" width="167" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOCK BORDER COLOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pUD-rz-xGf">
+                                        <rect key="frame" x="11" y="864" width="166" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="lvB-8X-iMG">
+                                        <rect key="frame" x="0.0" y="893" width="270" height="258"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4jz-3P-Dd2">
+                                                <rect key="frame" x="24" y="19" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zqz-aq-ywS">
+                                                <rect key="frame" x="24" y="61" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="fvQ-uF-ZWC">
+                                                <rect key="frame" x="79" y="15" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderRed:" destination="JWr-fB-pci" eventType="valueChanged" id="bcT-h5-hgf"/>
+                                                    <action selector="changedClockFaceRed:" destination="JWr-fB-pci" eventType="valueChanged" id="CZ2-f9-plK"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Gzb-yg-gFw">
+                                                <rect key="frame" x="79" y="57" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="QRH-Ke-xr1"/>
+                                                    <action selector="changedClockFaceGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="1YL-a5-C2I"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="63j-wg-jnu">
+                                                <rect key="frame" x="24" y="103" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Ffu-hK-6lK">
+                                                <rect key="frame" x="79" y="99" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="qLS-cF-4c6"/>
+                                                    <action selector="changedClockFaceBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="jpE-sc-LOL"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OYc-Yx-Q3H">
+                                                <rect key="frame" x="24" y="145" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Id2-Nz-q4p">
+                                                <rect key="frame" x="79" y="141" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="vgJ-Ef-9uS"/>
+                                                    <action selector="changedClockFaceAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="Ggs-qV-04z"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" id="ZCs-qU-TI7">
+                                                <rect key="frame" x="81" y="182" width="167" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIGIT COLOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZTY-na-u2N">
+                                        <rect key="frame" x="11" y="1171" width="164" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="2Zv-ae-a7g">
+                                        <rect key="frame" x="0.0" y="1194" width="270" height="258"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Cw-1a-Quc">
+                                                <rect key="frame" x="24" y="19" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hsK-4S-9cu">
+                                                <rect key="frame" x="24" y="61" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="yyc-sY-oLL">
+                                                <rect key="frame" x="79" y="15" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderRed:" destination="JWr-fB-pci" eventType="valueChanged" id="3eZ-rA-30j"/>
+                                                    <action selector="changedClockFaceRed:" destination="JWr-fB-pci" eventType="valueChanged" id="N2m-DO-u9j"/>
+                                                    <action selector="changedDigitRed:" destination="JWr-fB-pci" eventType="valueChanged" id="mon-I4-TJ5"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Vns-6D-ym6">
+                                                <rect key="frame" x="79" y="57" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="gXv-U1-0ga"/>
+                                                    <action selector="changedClockFaceGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="sqd-6g-dVa"/>
+                                                    <action selector="changedDigitGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="iw1-OM-2py"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W4y-zc-bjJ">
+                                                <rect key="frame" x="24" y="103" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="Eld-Xd-fCm">
+                                                <rect key="frame" x="79" y="99" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="xsT-XI-IBR"/>
+                                                    <action selector="changedClockFaceBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="Enh-HU-HNq"/>
+                                                    <action selector="changedDigitBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="Yg2-SJ-Thj"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hfa-F0-xOV">
+                                                <rect key="frame" x="24" y="145" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="0cR-Cy-IbL">
+                                                <rect key="frame" x="79" y="141" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="MYS-Zw-z1r"/>
+                                                    <action selector="changedClockFaceAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="eMe-B0-vlN"/>
+                                                    <action selector="changedDigitAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="jmz-aG-gyB"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" id="dCd-SY-HJc">
+                                                <rect key="frame" x="81" y="182" width="167" height="59"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRADUATION COLOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJW-3u-nOw">
+                                        <rect key="frame" x="11" y="1474" width="164" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="PVL-Jx-nYE">
+                                        <rect key="frame" x="0.0" y="1497" width="270" height="258"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZT5-oB-ohY">
+                                                <rect key="frame" x="24" y="19" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LMZ-So-QeY">
+                                                <rect key="frame" x="24" y="61" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="8Gu-NI-Q1t">
+                                                <rect key="frame" x="79" y="15" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderRed:" destination="JWr-fB-pci" eventType="valueChanged" id="eju-PU-jMa"/>
+                                                    <action selector="changedClockFaceRed:" destination="JWr-fB-pci" eventType="valueChanged" id="lBm-SH-JqZ"/>
+                                                    <action selector="changedDigitRed:" destination="JWr-fB-pci" eventType="valueChanged" id="wjR-1b-Zk8"/>
+                                                    <action selector="changedGraduationRed:" destination="JWr-fB-pci" eventType="valueChanged" id="MOf-cm-gsa"/>
+                                                </connections>
+                                            </slider>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="1a4-sL-nGs">
+                                                <rect key="frame" x="79" y="57" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="sBe-RR-UbS"/>
+                                                    <action selector="changedClockFaceGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="Kt3-R7-Tjn"/>
+                                                    <action selector="changedDigitGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="AUl-X4-BU1"/>
+                                                    <action selector="changedGraduationGreen:" destination="JWr-fB-pci" eventType="valueChanged" id="uif-0o-kJb"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RqQ-Es-lRe">
+                                                <rect key="frame" x="24" y="103" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="6OO-1B-HMG">
+                                                <rect key="frame" x="79" y="99" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="CKt-V3-1Rn"/>
+                                                    <action selector="changedClockFaceBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="Mp3-4g-TSQ"/>
+                                                    <action selector="changedDigitBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="Lqq-J8-HK8"/>
+                                                    <action selector="changedGraduationBlue:" destination="JWr-fB-pci" eventType="valueChanged" id="WPo-gX-UzS"/>
+                                                </connections>
+                                            </slider>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alpha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qFM-dX-SII">
+                                                <rect key="frame" x="24" y="145" width="54" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="xm6-gI-LxT">
+                                                <rect key="frame" x="79" y="141" width="171" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="changedClockBorderAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="H8q-6d-Fpx"/>
+                                                    <action selector="changedClockFaceAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="wgr-HU-HNi"/>
+                                                    <action selector="changedDigitAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="Bee-cQ-Y6W"/>
+                                                    <action selector="changedGraduationAlpha:" destination="JWr-fB-pci" eventType="valueChanged" id="1AF-7V-m0c"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" id="PyZ-jd-VKh">
                                                 <rect key="frame" x="81" y="182" width="167" height="59"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -268,27 +541,45 @@
                     </view>
                     <navigationItem key="navigationItem" id="98o-vW-kWN"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1500"/>
+                    <size key="freeformSize" width="320" height="3000"/>
                     <connections>
                         <outlet property="backgroundAlpha" destination="282-ja-6Wb" id="lOo-4q-cd3"/>
                         <outlet property="backgroundBlue" destination="Jex-Xw-vqU" id="qkh-jr-V6M"/>
                         <outlet property="backgroundGreen" destination="f7O-EG-qtZ" id="shN-LQ-npA"/>
                         <outlet property="backgroundPreview" destination="IG3-OL-ooh" id="kbn-g8-hS8"/>
                         <outlet property="backgroundRed" destination="Mcz-Ha-kDy" id="CRD-DF-Ppn"/>
+                        <outlet property="clockBorderAlpha" destination="Id2-Nz-q4p" id="X45-fB-pOh"/>
+                        <outlet property="clockBorderBlue" destination="Ffu-hK-6lK" id="kvz-zN-CEe"/>
+                        <outlet property="clockBorderGreen" destination="Gzb-yg-gFw" id="JFV-qd-FYM"/>
+                        <outlet property="clockBorderPreview" destination="ZCs-qU-TI7" id="V7l-Qb-qe7"/>
+                        <outlet property="clockBorderRed" destination="fvQ-uF-ZWC" id="cQ0-cj-TKx"/>
                         <outlet property="clockFaceAlpha" destination="s9F-Cf-NYB" id="YdQ-x8-4k9"/>
                         <outlet property="clockFaceBlue" destination="34L-y8-8Id" id="1md-HY-PkY"/>
                         <outlet property="clockFaceGreen" destination="87F-xt-mHq" id="bqw-gZ-ZjY"/>
                         <outlet property="clockFacePreview" destination="7O4-X6-lA6" id="DlD-uN-4Jb"/>
                         <outlet property="clockFaceRed" destination="Yeo-GP-FNd" id="woG-V3-Vjk"/>
+                        <outlet property="digitAlpha" destination="0cR-Cy-IbL" id="Ru2-Ef-78y"/>
+                        <outlet property="digitBlue" destination="Eld-Xd-fCm" id="Bpl-Jc-h4L"/>
+                        <outlet property="digitGreen" destination="Vns-6D-ym6" id="G0m-ZC-J8u"/>
+                        <outlet property="digitPreview" destination="dCd-SY-HJc" id="S4Z-06-9Dg"/>
+                        <outlet property="digitRed" destination="yyc-sY-oLL" id="8zh-4m-Xdy"/>
                         <outlet property="generalBorders" destination="b5X-Xd-90n" id="vKb-br-3re"/>
                         <outlet property="generalDigits" destination="8Vo-Qn-lRE" id="pkT-4S-eas"/>
                         <outlet property="generalGraduation" destination="LHw-Yh-Tto" id="A1g-9w-FFM"/>
+                        <outlet property="graduationAlpha" destination="xm6-gI-LxT" id="xrW-x4-SCX"/>
+                        <outlet property="graduationBlue" destination="6OO-1B-HMG" id="HaT-uo-1PV"/>
+                        <outlet property="graduationGreen" destination="1a4-sL-nGs" id="Nzh-37-tCm"/>
+                        <outlet property="graduationPreview" destination="PyZ-jd-VKh" id="iUB-W1-RsR"/>
+                        <outlet property="graduationRed" destination="8Gu-NI-Q1t" id="aty-5L-wgo"/>
                         <outlet property="leftPane" destination="fWb-oW-EHP" id="dos-VQ-5km"/>
                         <outlet property="pane00" destination="GJ8-Py-phZ" id="6BM-Px-BNY"/>
                         <outlet property="pane01" destination="cdp-wg-9f7" id="BnT-ui-Vh1"/>
                         <outlet property="pane02" destination="fLa-a7-4pT" id="ItX-hE-2AK"/>
                         <outlet property="pane03" destination="hBY-pV-n8n" id="9nC-OU-sOz"/>
                         <outlet property="pane04" destination="F1p-jZ-Ka4" id="cHo-xH-v2Y"/>
+                        <outlet property="pane05" destination="lvB-8X-iMG" id="Eoq-7f-gKv"/>
+                        <outlet property="pane06" destination="2Zv-ae-a7g" id="3uq-Zd-a8w"/>
+                        <outlet property="pane07" destination="PVL-Jx-nYE" id="ULb-dV-eSr"/>
                         <outlet property="scrollView" destination="W80-Pb-5Ce" id="wrc-x6-MZ6"/>
                     </connections>
                 </viewController>

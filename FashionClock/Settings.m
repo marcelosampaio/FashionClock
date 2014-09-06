@@ -141,5 +141,86 @@
     
 }
 
+#pragma mark - Clock Border Color
+-(UIColor *)clockBorderColor {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *redString=[defaults objectForKey:@"clockBorderColorRed"];
+    NSString *greenString=[defaults objectForKey:@"clockBorderColorGreen"];
+    NSString *blueString=[defaults objectForKey:@"clockBorderColorBlue"];
+    NSString *alphaString=[defaults objectForKey:@"clockBorderColorAlpha"];
+    
+    return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
+    
+}
+
+-(void)addClockBorderColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%f",red] forKey:@"clockBorderColorRed"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",green] forKey:@"clockBorderColorGreen"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",blue] forKey:@"clockBorderColorBlue"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",alpha] forKey:@"clockBorderColorAlpha"];
+    
+    [defaults synchronize];
+    
+}
+
+
+#pragma mark - Digit Color
+-(UIColor *)digitColor {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *redString=[defaults objectForKey:@"digitColorRed"];
+    NSString *greenString=[defaults objectForKey:@"digitColorGreen"];
+    NSString *blueString=[defaults objectForKey:@"digitColorBlue"];
+    NSString *alphaString=[defaults objectForKey:@"digitColorAlpha"];
+    
+    return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
+    
+}
+
+-(void)addDigitColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%f",red] forKey:@"digitColorRed"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",green] forKey:@"digitColorGreen"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",blue] forKey:@"digitColorBlue"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",alpha] forKey:@"digitColorAlpha"];
+    
+    [defaults synchronize];
+    
+}
+
+#pragma mark - Graduation
+-(int)debugValue {
+    return 9999;
+}
+-(UIColor *)graduationColor {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *redString=[defaults objectForKey:@"graduationColorRed"];
+    NSString *greenString=[defaults objectForKey:@"graduationColorGreen"];
+    NSString *blueString=[defaults objectForKey:@"graduationColorBlue"];
+    NSString *alphaString=[defaults objectForKey:@"graduationColorAlpha"];
+    
+    NSLog(@"Graduation Color.  Red=%f  Green=%f  Blue=%f  Alpha=%f",[redString floatValue],[greenString floatValue],[blueString floatValue],[alphaString floatValue]);
+    
+    return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
+    
+}
+
+-(void)addGraduationColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%f",red] forKey:@"graduationColorRed"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",green] forKey:@"graduationColorGreen"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",blue] forKey:@"graduationColorBlue"];
+    [defaults setObject:[NSString stringWithFormat:@"%f",alpha] forKey:@"graduationColorAlpha"];
+    
+    [defaults synchronize];
+    
+}
+
 
 @end

@@ -10,17 +10,23 @@
 
 // App Constants
 //      - Colors and their decomposition
-#define DEFAULT_APP_BACKGROUND_COLOR                    [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1]
+#define DEFAULT_APP_BACKGROUND_COLOR                    [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1.00f]
 #define DEFAULT_APP_BACKGROUND_COLOR_RED                0.05f
 #define DEFAULT_APP_BACKGROUND_COLOR_GREEN              0.50f
 #define DEFAULT_APP_BACKGROUND_COLOR_BLUE               0.20f
 #define DEFAULT_APP_BACKGROUND_COLOR_ALPHA              1.00f
 
-#define DEFAULT_CLOCK_FACE_COLOR                        [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1]
+#define DEFAULT_CLOCK_FACE_COLOR                        [UIColor colorWithRed:0.05f green:0.50f blue:0.20f alpha:1.00f]
 #define DEFAULT_CLOCK_FACE_COLOR_RED                    0.05f
 #define DEFAULT_CLOCK_FACE_COLOR_GREEN                  0.50f
 #define DEFAULT_CLOCK_FACE_COLOR_BLUE                   0.20f
 #define DEFAULT_CLOCK_FACE_COLOR_ALPHA                  1.00f
+
+#define DEFAULT_CLOCK_BORDER_COLOR                      [UIColor colorWithRed:1.00f green:1.00f blue:1.00f alpha:1.00f]
+#define DEFAULT_CLOCK_BORDER_COLOR_RED                  1.00f
+#define DEFAULT_CLOCK_BORDER_COLOR_GREEN                1.00f
+#define DEFAULT_CLOCK_BORDER_COLOR_BLUE                 1.00f
+#define DEFAULT_CLOCK_BORDER_COLOR_ALPHA                1.00f
 
 
 #define DEFAULT_APP_BACKGROUND_COLOR_LIGHT              [UIColor colorWithRed:0.25f green:0.70f blue:0.40f alpha:1]
@@ -62,5 +68,26 @@
 -(float)clockFaceAlpha;
 // Set Color
 -(void)addClockFaceColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
+
+
+// ======================== Clock Border Color =============================
+// Get color
+-(UIColor *)clockBorderColor;
+// Set Color
+-(void)addClockBorderColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
+
+// ======================== Digit Color =============================
+// Get color
+-(UIColor *)digitColor;
+// Set Color
+-(void)addDigitColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
+
+// ======================== Graduation Color =============================
+// Debug parameter
+-(int)debugValue;
+// Get color
+-(UIColor *)graduationColor;
+// Set Color
+-(void)addGraduationColorWithRed:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
 @end
