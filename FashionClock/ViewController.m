@@ -34,6 +34,11 @@
     // Navigation bar
     [self.navigationController.navigationBar setHidden:YES];
     
+    // Debug before addind clock to the UI
+    NSLog(@"clockBorderColor=%@",[self.settings clockBorderColor]);
+    NSLog(@"digitColor=%@",[self.settings digitColor]);
+    NSLog(@"graduationColor=%@",[self.settings graduationColor]);
+    
     // Load clock to UI
     [self analogClock];
     
@@ -151,11 +156,14 @@
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
     
-    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
-        return [self.settings graduationColor];
-    } else {
-        return [self.settings graduationColor];
-    }
+    NSLog(@"retrieving graduation color as %@",[self.settings graduationColor]);
+    return [self.settings graduationColor];
+    
+//    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
+//        return [self.settings graduationColor];
+//    } else {
+//        return [self.settings graduationColor];
+//    }
 }
 
 -(CGFloat)analogClock:(BEMAnalogClockView *)clock graduationAlphaForIndex:(NSInteger)index {
