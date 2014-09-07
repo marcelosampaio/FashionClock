@@ -151,13 +151,11 @@
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
     
-    return [self.settings graduationColor];
-    
-//    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
-//        return [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
-//    } else {
-//        return [UIColor yellowColor];
-//    }
+    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
+        return [self.settings graduationColor];
+    } else {
+        return [self.settings graduationColor];
+    }
 }
 
 -(CGFloat)analogClock:(BEMAnalogClockView *)clock graduationAlphaForIndex:(NSInteger)index {
