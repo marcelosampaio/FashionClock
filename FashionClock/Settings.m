@@ -203,9 +203,7 @@
     NSString *greenString=[defaults objectForKey:@"graduationColorGreen"];
     NSString *blueString=[defaults objectForKey:@"graduationColorBlue"];
     NSString *alphaString=[defaults objectForKey:@"graduationColorAlpha"];
-    
-    NSLog(@"Graduation Color.  Red=%f  Green=%f  Blue=%f  Alpha=%f",[redString floatValue],[greenString floatValue],[blueString floatValue],[alphaString floatValue]);
-    
+
     return [UIColor colorWithRed:[redString floatValue] green:[greenString floatValue] blue:[blueString floatValue] alpha:[alphaString floatValue]];
     
 }

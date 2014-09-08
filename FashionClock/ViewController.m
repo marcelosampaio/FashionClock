@@ -30,6 +30,8 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    NSLog(@"this version contains the graduationColor bug when running 64-bit");
 
     // Navigation bar
     [self.navigationController.navigationBar setHidden:YES];
@@ -155,8 +157,6 @@
 }
 
 - (UIColor *)analogClock:(BEMAnalogClockView *)clock graduationColorForIndex:(NSInteger)index {
-    
-    NSLog(@"retrieving graduation color as %@",[self.settings graduationColor]);
     return [self.settings graduationColor];
     
 //    if (!(index % 15) == 1) { // Every 15 graduation will be blue.
